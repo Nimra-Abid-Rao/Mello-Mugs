@@ -1,0 +1,118 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #ffe9f0; /* light pink */
+  font-family: 'Quicksand', sans-serif;
+}
+
+h1, h2 {
+  font-family: 'Pacifico', cursive;
+}
+
+.cute-font {
+  font-family: 'Pacifico', cursive;
+  color: #d6639a;
+}
+
+.name-font {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+  color: #111827;
+}
+
+/* ---------- Picture borders ---------- */
+.pic-border {
+  outline: 5px solid #f9a8c9;
+  border-radius: 12px;
+}
+
+.pic-border:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s;
+}
+
+/* ---------- Navbar menu ---------- */
+#menu-toggle {
+  display: none;
+}
+
+.menu-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  color: #be185d;
+  border: 2px solid #f472b6;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.menu-button:hover {
+  background-color: #f9a8d4;
+}
+
+.nav-menu {
+  display: none;
+  width: 100%;
+}
+
+#menu-toggle:checked ~ .nav-menu {
+  display: block;
+}
+
+.nav-list {
+  list-style: none;
+  margin: 16px 0 0 0;
+  padding: 16px;
+  background-color: #fff0f5;
+  border: 2px dashed #f472b6;
+  border-radius: 16px;
+}
+
+.nav-list a {
+  display: block;
+  padding: 8px 12px;
+  color: #be185d;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.nav-list a:hover {
+  color: #ec4899;
+}
+
+@media (min-width: 768px) {
+  .menu-button {
+    display: none;
+  }
+
+  .nav-menu {
+    display: block;
+    width: auto;
+  }
+
+  .nav-list {
+    display: flex;
+    gap: 32px;
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: 0;
+    border-radius: 0;
+  }
+
+  .nav-list a {
+    padding: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .pic-border {
+    border-width: 3px;
+    border-radius: 8px;
+  }
+}
